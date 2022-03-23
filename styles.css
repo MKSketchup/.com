@@ -1,0 +1,344 @@
+:root {
+  --primary: red;
+  --secondary: rgb(6, 211, 6);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #fff;
+}
+
+/* navbar navbar  */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  background-color: rgb(31, 30, 30);
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  padding: 0 30px;
+  transition: 1s ease-in;
+  color: red;
+  opacity: 0.8;
+  z-index: 100;
+}
+
+.navbar a {
+  color: var(--primary);
+  padding: 10px 20px;
+  margin: 5px;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  border: 1px solid var(--secondary);
+  border-radius: 5px;
+  color: var(--secondary);
+  box-shadow: 2px 2px 10px var(--secondary), -2px -2px 10px var(--secondary);
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar .loggo {
+  margin-top: 10px;
+  height: 50px;
+  width: 60px;
+}
+
+/* hero hero */
+
+.hero {
+  background: rgba(0, 0, 0, 0.4)
+    url("https://images.unsplash.com/photo-1561136594-7f68413baa99?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8dG9tYXRvfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60")
+    no-repeat center center/cover;
+  position: relative;
+  height: 100vh;
+  color: var(--secondary);
+  background-blend-mode: darken;
+}
+
+.hero .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.hero .content h1 {
+  font-size: 75px;
+}
+
+.hero .content h4 {
+  font-size: 20px;
+  max-width: 600px;
+  margin: 20px 0 30px;
+  color: #fff;
+}
+
+/* what we offer */
+
+.offer {
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}
+
+.offer h1 {
+  padding: 10px;
+  color: var(--primary);
+  font-size: 3rem;
+}
+
+/* cards cards */
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* margin: 10px; */
+}
+
+.image {
+  position: relative;
+  width: 400px;
+  height: 330px;
+  margin: 10px;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+}
+
+.image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  color: aliceblue;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.overlay--blur {
+  backdrop-filter: blur(3px);
+}
+
+.overlay > * {
+  transform: translateY(20px);
+  transition: transform 0.25s;
+}
+
+.overlay:hover {
+  opacity: 1;
+}
+
+.overlay:hover > * {
+  transform: translateY(0);
+}
+
+.description {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 3px;
+  padding: 10px;
+  color: white;
+  padding: 175px 10px;
+}
+
+.test {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+  color: aliceblue;
+}
+
+.headi {
+  color: seashell;
+  padding: 10px;
+}
+
+.line {
+  padding: 10px;
+}
+
+.btn {
+  padding: 10px 20px;
+  color: aliceblue;
+  list-style: none;
+  text-decoration: none;
+  border: 1px solid white;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+/* ABOUT US */
+
+.About_us {
+  margin: 15px;
+  background: rgb(240, 240, 240);
+}
+.about_h1 {
+  font-size: 3rem;
+  padding: 10px;
+  text-align: center;
+  margin-top: 25px;
+  color: var(--primary);
+}
+
+.about_para {
+  font-size: 19px;
+  padding: 20px;
+}
+
+/* FOOTER */
+
+/* FOOTER */
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 200px;
+}
+
+.footer a {
+  color: var(--primary);
+  margin: 15px;
+  margin-bottom: 10px;
+}
+
+.footer a:hover {
+  color: var(--secondary);
+}
+
+.footer .social > * {
+  margin-right: 30px;
+}
+
+.footer p {
+  padding: 10px;
+}
+
+span {
+  color: var(--primary);
+  font-weight: bold;
+}
+
+/* MOBILE */
+
+/* mobile mobile  */
+
+@media (max-width: 568px) {
+  .navbar {
+    flex-direction: column;
+    height: 120px;
+    padding: 20px;
+  }
+
+  .navbar a {
+    padding: 10px 10px;
+    margin: 0 3px;
+  }
+
+  .hero {
+    background: url("https://media.istockphoto.com/photos/bottled-pasta-sauce-surrounded-by-tomatoes-picture-id154919642?k=20&m=154919642&s=170667a&w=0&h=9SSXMFOOL4ztmvFBf_a2gcHt_cVVFaQgeJZCr_yvTlE=")
+      no-repeat center center/cover;
+  }
+
+  .facilities {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon {
+    color: seashell;
+    margin: 25px;
+    padding: 25px;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+  }
+
+  .image {
+    margin: 10px;
+  }
+}
+
+.change_content::after {
+  content: "";
+  animation: changetext 10s infinite linear;
+  color: var(--secondary);
+}
+
+@keyframes changetext {
+  0% {
+    content: "100% NATURAL";
+  }
+  25% {
+    content: "FRESH";
+  }
+  50% {
+    content: "AUTHENTIC ";
+  }
+  75% {
+    content: "100% REAL";
+  }
+  100% {
+    content: "BEST QUALITY";
+  }
+}
